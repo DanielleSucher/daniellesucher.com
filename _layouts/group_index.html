@@ -1,0 +1,31 @@
+---
+layout: paginated
+---
+
+<!-- This loops through the paginated posts -->
+{% for post in paginator.posts %}
+  <section class='post full-width'>
+    <h1 class="upcase">
+      <div class='date'>{{ post.date }}</div>
+      <a href='{{ post.url }}'>{{ post.title }}</a>
+    </h1>
+    <div class='content'>
+      {{ post.content }}
+    </div>
+  </section>
+  <div class="comments-link">
+    <a href='{{ post.url }}'>Comment here.</a>
+  </div>
+  <div class='hr'></div>
+{% endfor %}
+
+<!-- Pagination links -->
+<div class='pagination'>
+  {% if paginator.previous_page %}
+    <a href='/page{{ paginator.previous_page }}' class='previous'>Previous</a>
+  {% endif %}
+  <span class='page_number '>Page: {{ paginator.page }} of {{ paginator.total_pages }}</span>
+  {% if paginator.next_page %}
+    <a href='/page{{ paginator.next_page }}' class='next'>Next</a>
+  {% endif %}
+</div>
