@@ -52,7 +52,13 @@ img {
   float: right; }
 
 .muted {
-  color: #8f8f8f; }
+  color: #adadad;
+  font-size: 10px;
+}
+
+.less-vertical-space {
+  margin-bottom: -5px;
+}
 
 .colour-1 {
   color: #cc9944; }
@@ -274,10 +280,10 @@ section.post {
   section.post ul ul, section.post ul ol, section.post ol ul, section.post ol ol {
     margin-left: 20px; }
   section.post h1 {
-    text-transform: uppercase;
     text-align: center;
     line-height: 1.5em;
     margin-bottom: 30px; }
+    font-size: 140%;
     section.post h1 .date {
       color: #d0d0d0;
       font-size: 10px; }

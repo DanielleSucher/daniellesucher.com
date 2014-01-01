@@ -13,8 +13,8 @@ links:
     url:          /projects
   - name:         Blog
     url:          /blog
-  - name:         Archive
-    url:          /archive
+  - name:         Tags
+    url:          /tags
   - name:         Email
     url:          mailto:dsucher@gmail.com
     external:     true

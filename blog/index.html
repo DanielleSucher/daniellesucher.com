@@ -5,17 +5,32 @@ layout: paginated
 <!-- This loops through the paginated posts -->
 {% for post in paginator.posts %}
   <section class='post full-width'>
-    <h1 class="upcase">
-      <div class='date'>{{ post.date }}</div>
+    <h1 class='header'>
+      <div class='muted'>{{ post.date | date_to_string }}</div>
+
       <a href='{{ post.url }}'>{{ post.title }}</a>
+
+      {% if post.tags %}
+        <div class='muted'>
+          {% for tag in post.tags %}
+            <a href='/tag/{{ tag }}' class='muted'>{{ tag }}</a>
+            {% unless forloop.last %}
+              •
+            {% endunless %}
+          {% endfor %}
+        </div>
+      {% endif %}
     </h1>
+
     <div class='content'>
       {{ post.content }}
     </div>
   </section>
+
   <div class="comments-link">
     <a href='{{ post.url }}'>Comment here.</a>
   </div>
+
   <div class='hr'></div>
 {% endfor %}
 

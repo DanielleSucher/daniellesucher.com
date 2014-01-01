@@ -6,21 +6,33 @@
   </head>
   <body>
     {% include header.html %}
+
     <div id='container'>
       {% include links.html %}
-      {% include pages.html %}
-      <div class="content">
+
+      <div class='content'>
         <section class='post'>
-          <h1 class="upcase">
-            <div class='date'>{{ page.date | date_to_string }}</div>
+          <h1 class='header'>
+            <div class='muted less-vertical-space'>{{ page.date | date_to_string }}</div>
+
             {{ page.title }}
+
+            {% if page.tags %}
+              <div class='muted less-vertical-space'>
+                {% for tag in page.tags %}
+                  <a href='/tag/{{ tag }}' class='muted'>{{ tag }}</a>
+                  {% unless forloop.last %}
+                    •
+                  {% endunless %}
+                {% endfor %}
+              </div>
+            {% endif %}
           </h1>
+
           {{ content }}
-          {% include signoff.html %}
-
-
         </section>
       </div>
+
       {% if page.share == 'y' %}
         {% include share.html %}
       {% endif %}
@@ -30,6 +42,7 @@
       {% endif %}
       {% include links.html %}
     </div>
+
     {% include footer.html %}
   </body>
 </html>
