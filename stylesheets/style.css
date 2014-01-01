@@ -5,7 +5,7 @@ html, body {
   height: 100%; }
 
 body {
-  background: #f9f9f9;
+  background-image: url('/images/coffee-splatter-tile.jpg');
   color: #303030;
   font-family: 'Open Sans', sans-serif;
   font-weight: 400;
@@ -80,7 +80,7 @@ header {
 
 footer {
   width: 100%;
-  max-width: 600px;
+  max-width: 740px;
   line-height: 2em;
   margin: auto;
   padding-bottom: 30px;
@@ -89,12 +89,13 @@ footer {
     color: #797979; }
 
 #container {
+  font-size: 120%;
   *zoom: 1;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
   width: 100%;
-  max-width: 600px;
+  max-width: 740px;
   background: #fff;
   margin: 40px auto 20px;
   border-radius: 7px;
@@ -108,7 +109,7 @@ footer {
   #container .block {
     border-top: 1px solid #efefef;
     border-bottom: 1px solid #efefef;
-    padding: 30px 40px 24px;
+    padding: 10px 40px 4px;
     text-align: center; }
     #container .block:first-child, #container .block + .block {
       border-top: 0; }
@@ -142,8 +143,32 @@ footer {
   width: 100%;
   border-width: 0;
   border-style: solid;
-  padding: 30px 60px;
+  padding: 10px 60px 10px 60px;
   margin: auto; }
+
+.more-vertical-space {
+  padding: 30px 60px 30px 60px !important;
+}
+
+.full-width {
+  width: 100% !important;
+}
+
+.hr {
+  border-bottom: 1px solid #eee;
+}
+
+h1 a, .header {
+  color: #811E00;
+}
+
+.center {
+  text-align: center;
+}
+
+.comments-link {
+  padding-bottom: 10px !important;
+}
 
 a, .as-link {
   text-decoration: none;
@@ -252,7 +277,7 @@ section.post {
     text-transform: uppercase;
     text-align: center;
     line-height: 1.5em;
-    margin-bottom: 60px; }
+    margin-bottom: 30px; }
     section.post h1 .date {
       color: #d0d0d0;
       font-size: 10px; }
