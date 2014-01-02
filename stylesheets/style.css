@@ -51,15 +51,6 @@ img {
 .pull-right {
   float: right; }
 
-.muted {
-  color: #adadad;
-  font-size: 10px;
-}
-
-.less-vertical-space {
-  margin-bottom: -5px;
-}
-
 .colour-1 {
   color: #cc9944; }
 
@@ -152,6 +143,15 @@ footer {
   padding: 10px 60px 10px 60px;
   margin: auto; }
 
+.muted {
+  color: #adadad;
+  font-size: 10px;
+}
+
+.less-vertical-space {
+  margin-bottom: -5px;
+}
+
 .more-vertical-space {
   padding: 30px 60px 30px 60px !important;
 }
@@ -164,12 +164,16 @@ footer {
   border-bottom: 1px solid #eee;
 }
 
-h1 a, .header {
-  color: #811E00;
-}
-
 .center {
   text-align: center;
+}
+
+.pad_top {
+  padding-top: 30px !important;
+}
+
+h1 a, .header {
+  color: #811E00;
 }
 
 .comments-link {
@@ -392,3 +396,111 @@ img {
   margin-left: -340px; }
 .paging .right {
   margin-left: 320px; }
+
+/* responsive-slides */
+.rslides {
+  position: relative;
+  list-style: none;
+  overflow: hidden;
+  width: 100%;
+  padding: 0;
+  margin: 0;
+  }
+
+.rslides li {
+  -webkit-backface-visibility: hidden;
+  position: absolute;
+  display: none;
+  width: 100%;
+  left: 0;
+  top: 0;
+}
+
+.rslides li:first-child {
+  position: relative;
+  display: block;
+  float: left;
+}
+
+.rslides img {
+  display: block;
+  height: auto;
+  width: 100%;
+  border: 0;
+  align: center;
+}
+
+.prev, .next, .prev:hover, .next:hover {
+  position: absolute;
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+  left: 0;
+  z-index: 99;
+  opacity: 0.7;
+  text-indent: -9999px;
+  overflow: hidden;
+  text-decoration: none;
+  height: 61px;
+  width: 38px;
+  background: transparent url("/images/themes.gif") no-repeat left top;
+  margin-top: -250px;
+}
+
+.prev:active, .next:active {
+  opacity: 1.0;
+}
+
+.next, .next:hover {
+  left: auto;
+  background-position: right top;
+  right: 0;
+}
+
+
+.rslides_tabs {
+  margin-top: 10px;
+  text-align: center;
+  }
+
+.rslides_tabs li {
+  display: inline;
+  float: none;
+  _float: left;
+  *float: left;
+  margin-right: 5px;
+  }
+
+.rslides_tabs a {
+  text-indent: -9999px;
+  overflow: hidden;
+  -webkit-border-radius: 15px;
+  -moz-border-radius: 15px;
+  border-radius: 15px;
+  background: #ccc;
+  background: rgba(0,0,0, .2);
+  display: inline-block;
+  _display: block;
+  *display: block;
+  -webkit-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+  -moz-box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+  box-shadow: inset 0 0 2px 0 rgba(0,0,0,.3);
+  width: 9px;
+  height: 9px;
+  }
+
+.rslides_tabs .rslides_here a {
+  background: #222;
+  background: rgba(0,0,0, .8);
+  }
+
+.caption {
+  position: absolute;
+  display: block;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  padding: 15px;
+  text-align: center;
+  background: #000;
+  background: rgba(0,0,0, .8);
+  color: #fff;
+}
