@@ -172,6 +172,10 @@ footer {
   padding-top: 30px !important;
 }
 
+.pad_bottom {
+  padding-bottom: 20px !important;
+}
+
 h1 a, .header {
   color: #811E00;
 }
