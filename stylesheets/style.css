@@ -188,7 +188,6 @@ a, .as-link {
   text-decoration: none;
   color: #269;
   line-height: 1.4em;
-  display: inline-block;
   vertical-align: baseline;
   zoom: 1;
   *display: inline;
@@ -366,7 +365,6 @@ pre {
 code {
   font-size: 13px;
   color: #eee;
-  background: #39382e;
   padding: 2px 4px 3px;
   border-radius: 2px;
   line-height: 1.3em;
@@ -375,6 +373,10 @@ code {
   zoom: 1;
   *display: inline;
   *vertical-align: auto; }
+
+.code {
+  font-family: "Courier New", Courier, monospace;
+}
 
 img {
   max-width: 100%; }
