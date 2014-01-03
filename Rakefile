@@ -15,3 +15,11 @@ task :default do
     sleep 1
   end
 end
+
+task :build do
+  `jekyll build`
+end
+
+task :deploy => :build do
+  `rsync -a --rsh=ssh _site/ danielles@daniellesucher.com:daniellesucher.com/`
+end
