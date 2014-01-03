@@ -24,6 +24,8 @@ links:
   - name:         Twitter
     url:          http://twitter.com/DanielleSucher
     external:     true
+  - name:         Feed
+    url:          /feed.xml
 pygments:         true
 permalink:        pretty
 markdown:         redcarpet
