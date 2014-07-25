@@ -278,12 +278,12 @@ ul.posts .datetime {
   text-align: right; }
 
 section.post {
-  margin: 0 -60px;
+  margin: 0 -8%;
   text-align: left;
   border-top: 0;
   padding: 0; }
   section.post > *:not(.highlight) {
-    padding: 0 60px; }
+    padding: 0 8%; }
   section.post > ul, section.post > ol {
     padding: 0 80px; }
   section.post ul ul, section.post ul ol, section.post ol ul, section.post ol ol {
@@ -357,12 +357,14 @@ section.post, section > p {
 
 pre {
   overflow-x: auto;
-  padding: 10px 60px;
+  padding: 5% 8%;
   width: 100%;
   line-height: 1.2em;
   -webkit-box-sizing: border-box;
   -moz-box-sizing: border-box;
-  box-sizing: border-box; }
+  box-sizing: border-box;
+  white-space: pre-wrap;
+}
 
 code {
   font-size: 13px;
