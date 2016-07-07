@@ -21,3 +21,7 @@ end
 task :deploy => :build do
   `rsync -a --rsh=ssh _site/ danielles@daniellesucher.com:daniellesucher.com/`
 end
+
+task :serve do
+  `jekyll serve --watch`
+end
